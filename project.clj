@@ -1,5 +1,5 @@
 (def es-client-version "7.6.2")
-(defproject cc.qbits/spandex "0.7.5-SNAPSHOT"
+(defproject ai.finity/spandex "0.7.5-SNAPSHOT"
   :description "Clojure Wrapper of the new/official ElasticSearch REST client"
   :url "https://github.com/mpenet/spandex"
   :license {:name "Eclipse Public License"
@@ -12,7 +12,8 @@
                  [cc.qbits/commons "0.5.2"]
                  [cheshire "5.10.0"]
                  [ring/ring-codec "1.1.2"]]
-  :deploy-repositories [["snapshots" :clojars] ["releases" :clojars]]
+  :repositories {"releases" {:url "https://archiva.qbit.uno/repository/releases/"}
+                 "snapshots" {:url "https://archiva.qbit.uno/repository/snapshots/"}}
   :source-paths ["src/clj"]
   :global-vars {*warn-on-reflection* true}
   :pedantic? :warn
